@@ -1,9 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import React, { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation, useRoutes } from "react-router-dom";
 import './index.css';
-import Nav from "./components/nav";
-import Footer from "./components/footer";
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Product from "./pages/product";
@@ -23,7 +21,6 @@ const App = () => {
   return (
     <React.StrictMode>
       <BrowserRouter>
-        <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -31,7 +28,6 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/product/:id" element={<Product />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </React.StrictMode>
   );

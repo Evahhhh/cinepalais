@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const navigation = [
-  { name: "Accueil", href: "/home" },
+  { name: "Accueil", href: "/" },
   { name: "A propos", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -13,7 +13,7 @@ function classNames(...classes) {
 
 const Footer = () => {
   return (
-    <div className="border-gray-100 border-t">
+    <div className="border-gray-100 border-t absolute bottom-0 p-5">
       <div className="mx-8">
         <p>CinéPalais</p>
         <div>
@@ -23,7 +23,7 @@ const Footer = () => {
                 key={item.name}
                 className={classNames(
                   "text-black-300",
-                  "rounded-md px-3 py-2 text-sm font-medium"
+                  "rounded-lg px-3 py-2 text-sm font-medium"
                 )}
               >
                 {item.name}

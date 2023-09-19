@@ -4,7 +4,7 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Accueil", href: "/home" },
+  { name: "Accueil", href: "/" },
   { name: "A propos", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -22,9 +22,9 @@ export default function Nav() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-lg p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
+                  <span className="sr-only">Ouvrir le menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
@@ -36,7 +36,7 @@ export default function Nav() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
-                    src="../../public/assets/logo.png"
+                    src="/assets/logo.png"
                     alt="CinéPalais"
                   />
                 </div>
@@ -48,7 +48,7 @@ export default function Nav() {
                           key={item.name}
                           className={classNames(
                             "text-black-300 hover:bg-black hover:text-white",
-                            "rounded-md px-3 py-2 text-sm font-medium"
+                            "rounded-lg px-3 py-2 text-sm font-medium"
                           )}
                         >
                           {item.name}
@@ -59,22 +59,22 @@ export default function Nav() {
                 </div>
               </div>
               <div className="absolute gap-5 inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <Link to="/login">
+                <Link to="/login?type=login">
                   <button
                     className={classNames(
                       "text-black-300 hover:bg-black hover:text-white",
-                      "rounded-md px-3 py-2 text-sm font-medium"
+                      "rounded-lg px-3 py-2 text-sm font-medium"
                     )}
                   >
                     Connexion
                   </button>
                 </Link>
 
-                <Link to="/login">
+                <Link to="/login?type=signup">
                   <button
                     className={classNames(
                       "text-white bg-black hover:bg-gray-700 hover:text-white",
-                      "rounded-md px-3 py-2 text-sm font-medium"
+                      "rounded-lg px-3 py-2 text-sm font-medium"
                     )}
                   >
                     Inscription
@@ -93,7 +93,7 @@ export default function Nav() {
                   href={item.href}
                   className={classNames(
                     "text-black-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium"
+                    "block rounded-lg px-3 py-2 text-base font-medium"
                   )}
                 >
                   {item.name}
@@ -106,33 +106,3 @@ export default function Nav() {
     </Disclosure>
   );
 }
-
-/* export default function Nav() {
-  return (
-    <div className="component">
-      <div className="logoPart">
-        <img id="logo" src="/assets/logo.png" />
-        <h1> CinéPalais </h1>
-      </div>
-      <div className="navPart">
-        <Link className="navBtn" to="/home">
-          <button className="navBtnContent">Accueil</button>
-        </Link>
-        <Link className="navBtn" to="/about">
-          <button className="navBtnContent">A propos</button>
-        </Link>
-        <Link className="navBtn" to="/contact">
-          <button className="navBtnContent">Contact</button>
-        </Link>
-      </div>
-      <div>
-        <Link className="login" to="/login">
-            <button className="navBtnContent">Se connecter</button>
-        </Link>
-        <Link className="signin" to="/signin">
-            <button className="signInContent">Se connecter</button>
-        </Link>
-      </div>
-    </div>
-  );
-} */
