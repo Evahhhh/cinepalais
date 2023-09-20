@@ -15,7 +15,7 @@ function classNames(...classes) {
 
 export default function Nav() {
   return (
-    <Disclosure as="nav" className="bg-light-800 border-gray-100 border-b">
+    <Disclosure as="nav" className="mt-5 bg-light-800 border-gray-100 border-b">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -35,7 +35,7 @@ export default function Nav() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-8 w-auto"
+                    className="h-20 w-20"
                     src="/assets/logo.png"
                     alt="CinéPalais"
                   />
@@ -47,8 +47,8 @@ export default function Nav() {
                         <button
                           key={item.name}
                           className={classNames(
-                            "text-black-300 hover:bg-black hover:text-white",
-                            "rounded-lg px-3 py-2 text-sm font-medium"
+                            "text-black-300 hover:bg-black hover:text-white my-5",
+                            "rounded-full px-3 py-2 text-sm font-medium"
                           )}
                         >
                           {item.name}
@@ -63,7 +63,7 @@ export default function Nav() {
                   <button
                     className={classNames(
                       "text-black-300 hover:bg-black hover:text-white",
-                      "rounded-lg px-3 py-2 text-sm font-medium"
+                      "rounded-full px-3 py-2 text-sm font-medium"
                     )}
                   >
                     Connexion
@@ -74,7 +74,7 @@ export default function Nav() {
                   <button
                     className={classNames(
                       "text-white bg-black hover:bg-gray-700 hover:text-white",
-                      "rounded-lg px-3 py-2 text-sm font-medium"
+                      "rounded-full px-3 py-2 text-sm font-medium"
                     )}
                   >
                     Inscription

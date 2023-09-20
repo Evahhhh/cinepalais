@@ -13,31 +13,37 @@ function classNames(...classes) {
 
 const Footer = () => {
   return (
-    <div className="border-gray-100 border-t absolute bottom-0 p-5">
-      <div className="mx-8">
-        <p>CinéPalais</p>
-        <div>
-          {navigation.map((item) => (
-            <Link to={item.href}>
-              <button
-                key={item.name}
-                className={classNames(
-                  "text-black-300",
-                  "rounded-lg px-3 py-2 text-sm font-medium"
-                )}
-              >
-                {item.name}
-              </button>
-            </Link>
-          ))}
+    <footer className="border-gray-100 border-t p-5 ">
+        <div className="flex justify-center">
+          <div className="absolute left-6">
+              <img
+                className="h-16 w-auto"
+                src="/assets/logo.png"
+                alt="CinéPalais"
+              />
+          </div>
+          <div>
+            {navigation.map((item) => (
+              <Link to={item.href}>
+                <button
+                  key={item.name}
+                  className={classNames(
+                    "text-black-300",
+                    "rounded-full px-3 py-2 text-sm font-medium"
+                  )}
+                >
+                  {item.name}
+                </button>
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
       <div className="flex space-x-4 mx- justify-center ">
         <p>Mentions légales</p>
         <p>© 2023 CinéPalais</p>
         <p>Politique de confidentialité</p>
       </div>
-    </div>
+    </footer>
   );
 };
 export default Footer;
