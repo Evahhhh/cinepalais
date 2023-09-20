@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import products from "../mockData";
 
 export default function Product() {
+  window.scrollTo(0, 0);
   const { id } = useParams();
   const product = products.find((product) => product.id == id);
 
