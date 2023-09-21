@@ -1,7 +1,8 @@
 import React from "react";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 export default function Contact() {
   return (
     <>
@@ -17,13 +18,13 @@ export default function Contact() {
           </h3>
           <ul className="list-none ml-0 flex flex-col">
             <li className="mb-2">
-              <span className="font-bold">Tel:</span> 0546987452
+              <span className="font-bold"><FontAwesomeIcon icon={faPhone} /></span> 0546987452
             </li>
             <li className="mb-2">
-              <span className="font-bold">Mail:</span> cinepalais@mail.com
+              <span className="font-bold"><FontAwesomeIcon icon={faEnvelope} /></span> cinepalais@mail.com
             </li>
             <li className="mb-2">
-              <span className="font-bold">Adresse:</span> 15 rue du palais
+              <span className="font-bold"><FontAwesomeIcon icon={faLocationDot} /></span> 15 rue du palais
               897458 palais
             </li>
           </ul>
