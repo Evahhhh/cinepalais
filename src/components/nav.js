@@ -56,7 +56,7 @@ export default function Nav() {
                               ? " hover:text-gray-700 "
                               : "hover:bg-black hover:text-white",
                             "text-black-300 my-5 cursor-pointer",
-                            "rounded-full px-3 py-2 text-sm font-medium"
+                            "rounded-full px-3 py-1 text-sm font-medium"
                           )}
                         >
                           {item.name}
@@ -71,7 +71,7 @@ export default function Nav() {
                   <button
                     className={classNames(
                       "text-black-300 md:hover:bg-black md:hover:text-white hover:text-gray-700",
-                      "rounded-full px-3 md:py-2 text-sm font-medium"
+                      "rounded-full px-3 md:py-1 text-sm font-medium"
                     )}
                   >
                     Connexion
