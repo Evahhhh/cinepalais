@@ -129,6 +129,32 @@ const products = [
     description:
       "Un croissant qui brille comme un diamant, trempé dans un café qui chuchote des secrets élégants, créant un petit-déjeuner digne des plus grandes stars de la haute couture.",
   },
+  {
+    id: 11,
+    name: "Pomme empoisonnée",
+    category: "animation",
+    price: 2,
+    imageSrc: "/assets/meal/pomme.jpg",
+    imageAlt: "pomme empoisonnée de blanche neige",
+    emporter: "Oui",
+    livraison: "Non",
+    rating: 1,
+    description:
+      "Une pomme qui brille comme un rubis, avec une peau aussi rouge que le sang et un cœur aussi noir que la nuit, qui vous fera tomber dans un sommeil profond.",
+  },
+  {
+    id: 12,
+    name: "Oeufs aux plats et bacons",
+    category: "animation",
+    price: 6,
+    imageSrc: "/assets/meal/oeufs.jpg",
+    imageAlt: "oeufs aux plats du château ambulant",
+    emporter: "Oui",
+    livraison: "Non",
+    rating: 5,
+    description:
+      "Des œufs qui dansent dans la poêle, avec du bacon qui chante une chanson joyeuse, créant un petit-déjeuner qui vous fera danser toute la journée.",
+  }
 ];
 
 export default products;

@@ -19,8 +19,8 @@ export default function Login() {
 
   return (
     <>
-      <div className="columns-2 h-screen gap-10">
-        <div className="w-full h-screen">
+      <div className="md:columns-2 h-screen gap-10">
+        <div className="hidden sm:block w-full h-screen">
           <img
             className="object-cover h-full w-full overflow-hidden"
             src="/assets/popcorn.jpg"
@@ -28,7 +28,7 @@ export default function Login() {
           />
         </div>
 
-        <div className="w-full h-screen mt-10 sm:mx-auto sm:w-full sm:max-w-sm flex flex-col justify-center">
+        <div className="p-10 w-full h-screen mt-10 sm:mx-auto sm:w-full sm:max-w-sm flex flex-col justify-center">
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             {sentence}
           </h2>

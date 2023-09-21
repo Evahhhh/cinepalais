@@ -1,12 +1,13 @@
 import ReactDOM from 'react-dom/client';
 import React, { useEffect } from "react";
-import { BrowserRouter, Route, Routes, useLocation, useRoutes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './index.css';
 import About from "./pages/about";
 import Contact from "./pages/contact";
 import Product from "./pages/product";
 import Home from "./pages/home";
 import Login from "./pages/login";
+import Cart from "./pages/cart";
 
 const App = () => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/product/:id?" exact element={<Product />} />
         </Routes>
       </BrowserRouter>

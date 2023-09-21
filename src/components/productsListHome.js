@@ -7,8 +7,8 @@ export default function ProductsList() {
   const [activeFilter, setActiveFilter] = useState("all");
 
   return (
-    <div className="bg-white">
-      <div className="flex align-center gap-5 pt-10">
+    <div className="bg-white mb-0 pb-20">
+      <div className="flex align-center gap-5 md:pt-10">
         <button
           onClick={() => setActiveFilter("all")}
           className={
@@ -41,12 +41,11 @@ export default function ProductsList() {
         </button>
       </div>
 
-      <div className="mx-auto max-w-2xl  py-15  sm:py-24 lg:max-w-7xl ">
+      <div className="mx-auto max-w-2xl  py-5  sm:py-10 lg:max-w-7xl ">
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-          {/* {products.map((filteredProduct) => ( */}
           {products
             .filter((product) => {
-              if(activeFilter === "all") return true;
+              if (activeFilter === "all") return true;
               else return product.category === activeFilter;
             })
             .map((filteredProduct) => (
