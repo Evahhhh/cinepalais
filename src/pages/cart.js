@@ -47,7 +47,7 @@ export default function Cart() {
                 const product = productsList.find(
                   (product) => product.id == id[0]
                 );
-                totalPrice = totalPrice + product.price;
+                totalPrice = totalPrice + product.price * id.length;
                 return (
                   <>
                     <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
